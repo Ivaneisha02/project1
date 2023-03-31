@@ -90,5 +90,13 @@ odd:
     addi $s1,$s1,1
     j loop
 #created odd label
+done:
+    
+    li $v0, 4
+    la $a0, result
+    syscall
+
+    li $v0, 1
+    #done label to exit program
 
  

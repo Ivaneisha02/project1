@@ -54,5 +54,18 @@ loop_letter:
     j loop
     #created letter loop to check letters seperately
 
+is_digit:
+    ble   $t3, 48, next    
+    sub $t3, $t3, 48 
+    j process_digit
+
+is_lower:
+    bge $t3, 113, next
+    sub $t3, $t3, 103 
+    
+    j process_digit
+
+#created digit and lower labels to insure correct ranges
+
 
  

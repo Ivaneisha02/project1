@@ -42,7 +42,7 @@ loop_digit:
     #created seperate loop for numbers
 
 loop_letter:
-    li $t0, 0 
+    li $t0, 0
     
     addi $a0, $a0, 1 # increment input string pointer
     add $t0, $t0, 1 # increment position counter
@@ -60,8 +60,8 @@ is_digit:
     j process_digit
 
 is_lower:
-    bge $t3, 113, next
-    sub $t3, $t3, 103 
+    bge $t3, 81, next
+    sub $t3, $t3, 55 
     
     j process_digit
 
@@ -73,6 +73,10 @@ is_upper:
     j process_digit
 process_digit:
     beq $s1, 2, even
+    beq $s1, 4 ,even
+    beq $s1, 6 ,even
+    beq $s1, 8 ,even
+    beq $s1, 10 ,even
     #create upper label and process_digit label
     j odd
     j loop

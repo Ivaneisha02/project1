@@ -74,5 +74,16 @@ is_upper:
 process_digit:
     beq $s1, 2, even
     #create upper label and process_digit label
+    j odd
+    j loop
+
+next: 
+    addi $t0,$t0,1
+    j loop
+even:
+    sub $t1, $t1, $t3   
+    addi $s1,$s1,1
+    j loop
+#created next and even laels
 
  

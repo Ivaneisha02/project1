@@ -98,5 +98,12 @@ done:
 
     li $v0, 1
     #done label to exit program
+    add $a0, $t1, $t2 
+    syscall
+
+    
+    li $v0, 10
+    syscall
+#finished done label
 
  

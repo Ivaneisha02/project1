@@ -85,5 +85,10 @@ even:
     addi $s1,$s1,1
     j loop
 #created next and even laels
+odd:
+    add $t1, $t1, $t3
+    addi $s1,$s1,1
+    j loop
+#created odd label
 
  

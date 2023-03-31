@@ -66,6 +66,13 @@ is_lower:
     j process_digit
 
 #created digit and lower labels to insure correct ranges
+is_upper:
+    bge $t3, 81, next
 
+    sub $t3, $t3, 55 
+    j process_digit
+process_digit:
+    beq $s1, 2, even
+    #create upper label and process_digit label
 
  

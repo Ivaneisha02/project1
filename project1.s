@@ -41,5 +41,18 @@ loop_digit:
     j loop
     #created seperate loop for numbers
 
+loop_letter:
+    li $t0, 0 
+    
+    addi $a0, $a0, 1 # increment input string pointer
+    add $t0, $t0, 1 # increment position counter
+
+    
+    bge $t3, 97, is_lower 
+    bge $t3, 65, is_upper 
+    bge $t3, 48, is_digit 
+    j loop
+    #created letter loop to check letters seperately
+
 
  

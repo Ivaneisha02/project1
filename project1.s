@@ -1,7 +1,7 @@
 .data
 input: .space 11    
-prompt: .asciiz "input: "
-result: .asciiz "\noutput: "
+prompt: .asciiz ""
+result: .asciiz "\n"
 
 .text
 main:  #I created my user input field with space for 11 characters

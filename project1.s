@@ -19,4 +19,16 @@ main:  #I created my user input field with space for 11 characters
     li $t2, 0
     #initialized input lenght, even and odd trackers
 
+loop:
+    lb $t3, ($a0) 
+    beqz $t3, done
+
+    addi $a0, $a0, 1
+    addi $t0, $t0, 1
+
+    ble $t3, 57, next
+    #load each char into a1
+    #increment length and char
+
+
  

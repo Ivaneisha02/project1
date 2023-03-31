@@ -33,5 +33,13 @@ loop:
     bge $t3, 48, loop_letter  
     j next
 
+loop_digit:
+    li $t0, 1
+    addi $a0, $a0, 1 
+    add $t0, $t0, 1 
+    bge $t3, 97, is_lower 
+    j loop
+    #created seperate loop for numbers
+
 
  
